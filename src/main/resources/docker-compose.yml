@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest 
+    environment:
+      POSTGRES_DB: spotify_clone
+      POSTGRES_USER: codeur269
+      POSTGRES_PASSWORD: 
+      POSTGRES_HOST_AUTH_METHOD: trust
+      
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/bitnami/postgresql  
