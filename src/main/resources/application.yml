@@ -41,3 +41,9 @@ spring:
       max-request-size: 100MB
 server:
   port: 8080
+
+okta:
+  oauth2:
+    issuer: https://dev-pe3qjvdjn83w2lu4.us.auth0.com/
+    client-id: tkmQhUtVzjilocpDQAjbfj7BunIHWS2p
+    client-secret: qacq57AjRrKkXs6-tzP_V2_iNZtgQ_QQ_3SVfBHLH4rYJF5dalcoazpdBnX7P1bw

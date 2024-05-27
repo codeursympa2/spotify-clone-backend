@@ -1,8 +1,8 @@
 package sn.codeur269.clonespotifybackend.usercontext.mapper;
 
 import org.mapstruct.Mapper;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 
+import sn.codeur269.clonespotifybackend.usercontext.domain.User;
 import sn.codeur269.clonespotifybackend.usercontext.dto.ReadUserDto;
 
 // Cette annotation indique à MapStruct de générer une implémentation 
@@ -13,6 +13,5 @@ import sn.codeur269.clonespotifybackend.usercontext.dto.ReadUserDto;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-
     ReadUserDto readUserDTOToUser(User user);
 }

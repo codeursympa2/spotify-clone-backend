@@ -1,7 +1,7 @@
 package sn.codeur269.clonespotifybackend.catalogcontext.domain;
 
 import java.io.Serializable;
-import java.rmi.server.UID;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,7 +23,7 @@ public class Song implements Serializable {
     private Long id;
 
     @Column(name = "public_id",unique = true,nullable = false)
-    private UID publicId;
+    private UUID publicId;
 
     @Column(name = "title",nullable = false)
     private String title;

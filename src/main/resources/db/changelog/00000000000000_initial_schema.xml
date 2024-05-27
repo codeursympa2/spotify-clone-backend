@@ -48,7 +48,7 @@
             </column>
             <column name="cover_content_type" type="varchar(255)">
                 <constraints nullable="false" />
-            </column>
+            </column> 
         </createTable>
     </changeSet>
 

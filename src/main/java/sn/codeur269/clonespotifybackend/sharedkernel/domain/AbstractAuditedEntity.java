@@ -10,11 +10,9 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+
+
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractAuditedEntity<T> implements Serializable {
@@ -27,6 +25,21 @@ public abstract class AbstractAuditedEntity<T> implements Serializable {
 
     @LastModifiedDate
     @Column(name="last_modified_date")
-    private Instant lastModifiedDatet=Instant.now();
+    private Instant lastModifiedDate=Instant.now();
    
+    public Instant getCreateDate() {
+        return createdDate;
+    }
+
+    public void setCreateDate(Instant createDate) {
+        this.createdDate = createDate;
+    }
+
+    public Instant getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(Instant lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
 }
