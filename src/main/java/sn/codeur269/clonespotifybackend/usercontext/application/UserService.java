@@ -16,7 +16,7 @@ import sn.codeur269.clonespotifybackend.usercontext.repository.UserRepository;
 
 
 @Service
-@AllArgsConstructor
+
 public class UserService {
 
   
@@ -24,6 +24,11 @@ public class UserService {
 
     private final UserMapper userMapper;
 
+
+    public UserService(UserRepository userRepository, UserMapper userMapper) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
+    }
 
     //Si la date de modifiation est récente par rapport à l'ancienne on met à jour l'utilisateur
     //Sinon on le crée
